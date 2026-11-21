@@ -14,6 +14,10 @@ uvicorn app.main:app --reload
 
 브라우저에서 `http://127.0.0.1:8000/`을 열어 예산을 입력하고 **추천**을 누릅니다. API 요청/응답은 `http://127.0.0.1:8000/docs`의 `POST /api/recommendations`에서 확인할 수 있습니다.
 
+## Vercel 배포
+
+GitHub의 `punchlovedrunksong-create/multi-agent-5` 저장소를 Vercel에 가져온 뒤 프로젝트 Root Directory를 `Finance-Recommend/angel_ETF`로 지정합니다. FastAPI를 자동 감지하도록 Framework Preset은 FastAPI로 두고 배포합니다. 현재 MVP는 고정 CSV를 사용하므로 KRX API 키 환경 변수는 필요하지 않습니다.
+
 ## 입력 기본값과 제한
 
 - 예산: 0원보다 큰 금액, 10원 단위(10원 미만 내림), 필수; 천 단위 쉼표 표시
